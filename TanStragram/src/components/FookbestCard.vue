@@ -1,6 +1,6 @@
 <template>
 <div>
-        {{info}}
+        <!-- {{info}} -->
     <div id="fookbest-card">
      <div class="ui card">
   <div class="content">
@@ -44,5 +44,9 @@ export default {
 </script>
 
 <style>
-
+#fookbest-card{
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
 </style>

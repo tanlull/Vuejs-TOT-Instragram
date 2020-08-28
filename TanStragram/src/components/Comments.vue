@@ -74,10 +74,10 @@
   </div>
   <form class="ui reply form">
     <div class="field">
-      <textarea size></textarea>
+      <input type="text"></input>
     </div>
-    <div class="ui blue labeled submit icon button">
-      <i class="icon edit"></i> Add Reply
+    <div class="ui gray labeled submit icon button">
+      <i class="icon edit"></i> Add Comment
     </div>
   </form>
 </div>
