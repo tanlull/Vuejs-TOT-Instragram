@@ -1,8 +1,19 @@
 <template>
-    <div id="grid-images">
-        <InstraCard :info="info[0]"></InstraCard>
+<div>
+    <div id="grid-images" >
+        <InstraCard 
+        v-for="(data,idx) in info"
+        :info="data"
+        :img="apis[idx].img"
+        :key="data.username+idx"
+        >
+
+        </InstraCard>
+
     </div>
-    
+
+    {{apis[0].img}}
+    </div>
 </template>
 
 <script>
@@ -23,11 +34,18 @@ export default {
       info:[
           {
             username: 'TanStragram',
-            avatarImg: 'https://photos.google.com/share/AF1QipNhmCnzFItlJusnzmIfKTGdr0qhgs9Kg5bw-jfAvPnGkRqURdT5iGTQ8PZVT28WtA/photo/AF1QipMBi9h2V5G9wSz8x2MHi1d8QmwoEqt22Uw-3L9F?key=RV9QTEVzaGZwblpKQkR4aTlKbXoxQUd5ZEI3T1F3',
+            avatarImg: 'https://github.com/tanlull/test_db/raw/master/images/tan.jpg',
             image: '',
             numOfLikes: 77,
             numOfComment: 99
-         }
+         },
+              {
+            username: 'LullStragram',
+            avatarImg: 'https://github.com/tanlull/test_db/raw/master/images/lull.jpg',
+            image: '',
+            numOfLikes: 177,
+            numOfComment: 199
+         },
       ]
     }
   },
@@ -37,7 +55,7 @@ export default {
         .then(response => this.dogs = response.data.message)
 
     axios
-      .get("http://localhost:3000/api/houses")
+      .get("http://localhost:3000/api/images")
       .then((response) => (this.apis = response.data));
   },
 };

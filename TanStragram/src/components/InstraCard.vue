@@ -7,7 +7,7 @@
                     <b>{{ info.username }}</b> 
                 </div>
                 <div class="image">
-                    <img :src="info.image">
+                    <img :src="img">
                 </div>
                 <div class="content">
                     <span class="right floated">
@@ -32,6 +32,7 @@ export default {
     name: 'InstraCard',
     props:{
         info: Object,
+        img: null,
     }
 
 }
